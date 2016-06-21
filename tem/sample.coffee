@@ -1,3 +1,11 @@
+modelName = "android"
+
+tem = """
+======================= index.html ==============================
+<a class="btn btn-primary btn-lg" role="button" href="./src/{modelName}/{modelName}.html">{modelName}</a>
+
+
+======================= {modelName}.html =======================
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width,initial-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Regex</title>
+    <title>Android-sample</title>
     <!-- utils -->
     <script src="../js/utils/jquery.js"></script>
     <script src="../js/utils/StringUtil.js"></script>
@@ -27,13 +35,13 @@
     <script src="../js/escape/crypto-js.js"></script>
     <script src="../js/escape/escape.js"></script>
     <!-- local -->
-    <link rel="stylesheet" href="./regex.css" />
-    <script src="./regex.js"></script>
+    <link rel="stylesheet" href="./android.css" />
+    <script src="./android.js"></script>
 </head>
 
 <body>
     <div class="page-header">
-        <h1>Regex <small>regexs</small></h1>
+        <h1>Android <small>sample</small></h1>
     </div>
     <div class="head-config-panel">
         <form class="form-horizontal">
@@ -65,7 +73,7 @@
         $(function() {
             console.log('====================hello==============');
             loadConfig();
-            initEvent(); 
+            initEvent();
             $('pre code').each(function(i, block) {
                 hljs.highlightBlock(block);
             });
@@ -75,3 +83,15 @@
 </body>
 
 </html>
+
+
+
+======================= {modelName}.js =========================
+
+
+
+======================= {modelName}.css ========================
+
+
+
+"""
