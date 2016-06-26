@@ -74,3 +74,31 @@ function doReg(text, reg) {
     });
     return resultArr.join('\n');
 };
+
+function initDragEvent(){
+    console.log("hello world.");
+    var counts = [ 0, 0, 0 ];
+    $(".draggable").draggable({ axis: false,        // "x"  "y"
+                                distance: 5,
+                                delay: 200,
+                                addClasses: true,
+                                containment: "document",
+                                cursor: "crosshair",
+//                                 cursorAt: { right: 15, bottom:15 },
+                                disabled: false,
+//                                 grid: [ 50, 50 ],
+                                handle: "span",
+                                helper: "clone",
+                                resver: true,
+                                start: function(e) {
+                                   counts[ 0 ]++;
+                                   console.dir(e);
+                                 },
+                                 drag: function() {
+                                   counts[ 1 ]++;
+                                 },
+                                 stop: function() {
+                                   counts[ 2 ]++;
+                                 }
+                                });
+}
