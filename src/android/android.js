@@ -86,10 +86,22 @@ function initDragEvent(){
                                 cursor: "crosshair",
 //                                 cursorAt: { right: 15, bottom:15 },
                                 disabled: false,
-//                                 grid: [ 50, 50 ],
-                                handle: "span",
-                                helper: "clone",
-                                resver: true,
+//                                 grid: [ 50, 50 ],   // 拖动时对齐到网格
+//                                 handle: "span",     // 拖动手柄
+                                helper: "clone",       // original clone
+                                revert: true,          // true invalid valid
+                                revertDuration: 2000,
+                                scope: "default",      // 拖放分组 tasks default
+                                scroll: false,
+                                scrollSensitivity: 100, // 拖放滚动敏感度
+                                scrollSpeed: 100,       // 拖放滚动速度
+                                snap: true,
+                                snapMode: "both",       // "inner", "outer", "both"
+                                snapTolerance: 30,
+                                stack: ".container",    // 元素层级
+                                zIndex: 100,            // 元素层级
+                                iframeFix: true,
+                                opacity: 0.85,
                                 start: function(e) {
                                    counts[ 0 ]++;
                                    console.dir(e);
