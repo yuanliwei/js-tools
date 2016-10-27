@@ -40,7 +40,7 @@ function onChange() {
     var reg = $('#inputRegex').val().trim();
 
     var mode = parseInt($('#mode-option-group input[name="genMode"]:checked').val());
-    
+
     switch (mode) {
         case 1: reg = 'Mapped "\\{\\[(.*?)\\]'; break;
         case 2: reg = '^(\\d+\\.\\d+.*)$'; break;
@@ -90,7 +90,7 @@ function initDragEvent(){
 //                                 handle: "span",     // 拖动手柄
                                 helper: "clone",       // original clone
                                 revert: true,          // true invalid valid
-                                revertDuration: 2000,
+                                revertDuration: 200,
                                 scope: "default",      // 拖放分组 tasks default
                                 scroll: false,
                                 scrollSensitivity: 100, // 拖放滚动敏感度
