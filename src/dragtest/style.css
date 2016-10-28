@@ -6,18 +6,19 @@ body {
 .headlayout{}
 .labelcontent{
     padding: 0px;
-    background: #447a45;
+    background: rgba(68, 122, 69, 0.12);
     display: block;
     /* height: 26px; */
     text-align: right;
     margin: 0px;
+    transition: all 500ms ease;
 }
 .labelcontent li{padding: 5px 8px;border-radius: 5px;display: inline-block;list-style-type: none;margin: 2px;background: bisque;}
 .labelcontent li .draghandle{
     display: inline-block;
     border-radius: 5px;
 }
-.draghandle:hover{cursor: all-scroll;}
+.draghandle:hover, .sorthandle:hover{cursor: all-scroll;}
 .contentlayout{
     /* background: bisque; */
 }
@@ -30,4 +31,9 @@ body {
     border: solid green;
     margin: 4px;
     padding-bottom: 30px;
+    box-shadow: 1px 1px 15px rgba(14, 2, 2, 0.15);
+}
+.base-content:hover > .headlayout .labelcontent{
+  background: #247924;
+  transition: all 1000ms ease;
 }
